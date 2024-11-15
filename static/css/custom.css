@@ -1,0 +1,71 @@
+.main-sidebar .brand-link .brand-text {
+    display: none;
+}
+
+.main-sidebar .brand-link .brand-image {
+    width: 100%;
+    height: auto;
+    max-height: 48px;
+    margin: 0;
+    float: unset;
+    box-shadow: none !important;
+    object-fit: contain;
+}
+
+body:not(.layout-fixed) .main-sidebar .sidebar {
+    overflow-y: unset;
+}
+
+body:not(.layout-fixed) .main-sidebar {
+    overflow: unset;
+}
+
+.main-footer > div.float-right.d-none.d-sm-inline {
+    display: none !important;
+}
+
+.timeline>div>.timeline-item>.timeline-header {
+    font-size: 14px;
+}
+
+.main-header.navbar {
+    border: none;
+}
+
+a.nav-link.btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-item .dropdown-header {
+    text-align: left;
+}
+
+.jazzmin-login-page .login-logo img {
+    max-width: 200px;
+}
+
+.login-box .card .card-body p:nth-child(2) {
+    display: none;
+}
+
+[class*=sidebar-dark] .user-panel {
+    padding: 0.6em;
+    align-items: center;
+}
+
+[class*=sidebar-dark] .user-panel .user-profile {
+    font-size: 1.6em;
+}
+
+#changelist-search .selection {
+    text-transform: capitalize;
+}
+
+#changelist-search .form-group .small {
+    margin-left: 12px;
+}
+
+.main-header .navbar-nav .nav-item.d-sm-inline-block .nav-link {
+    color: red;
+}
