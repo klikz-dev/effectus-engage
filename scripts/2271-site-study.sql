@@ -1,9 +1,7 @@
-/******** Import Study **********/
 INSERT INTO `epic_prod`.`study` (`study_id`, `name`, `client`, `description`)
 VALUES (2271, 'VENUSS (CVAY736S12201) Study', 'Novartis', 'dcSSc Study');
 
 
-/******** Import Sites **********/
 INSERT INTO `epic_prod`.`site` (`id`, `name`, `address`, `address2`, `city`, `state`, `zip`, `country`, `pi_name`)
 VALUES
     (1008, 'Clinical Res Of W Florida', '2147 NE Coachman Road', NULL, 'Clearwater', 'FL', '33765', 'US', 'Rodney Daniel'),
@@ -22,7 +20,6 @@ VALUES
     (1019, 'University of Chicago Hospitals', '5841 South Maryland Avenue', NULL, 'Chicago', 'IL', '60637', 'US', 'Michael Macklin');
 
 
-/******** Import Study - Sites relationships **********/
 INSERT INTO `epic_prod`.`study_site` (`study_id`, `site_id`)
 VALUES 
     (2271, 1008),
