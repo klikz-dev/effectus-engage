@@ -43,17 +43,17 @@ VALUES ('2272', '0', 'QUESTION_CHECKBOX', 'STUDY_CRITERIA_CHECKLIST', 'Key Study
 -- Did the patient meet all of the key study criteria? --
 INSERT INTO `epic_prod`.`question_lookup_log`
 (`study_id`, `is_answer`, `type`, `key`, `value`, `order`, `required`, `double_columns`) 
-VALUES ('2272', '0', 'QUESTION_RADIO', 'PATIENT_MEET_CRIERIA', 'Did the patient meet all of the key study criteria outlined above?', '9', '1', '0');
+VALUES ('2272', '0', 'QUESTION_RADIO', 'PATIENT_MEET_CRIERIA', 'Did the patient meet all of the key study criteria outlined above? (If "yes" or \"unknown\", proceed with consultation)', '9', '1', '0');
 
 -- Method of patient consultation regarding potential study participation --
 INSERT INTO `epic_prod`.`question_lookup_log`
 (`study_id`, `is_answer`, `type`, `key`, `value`, `order`, `required`, `double_columns`) 
-VALUES ('2272', '0', 'QUESTION_RADIO', 'METHOD_OF_CONSULTATION', 'Method of patient consultation regarding potential study participation:', '10', '1', '0');
+VALUES ('2272', '0', 'QUESTION_RADIO', 'METHOD_OF_CONSULTATION', 'Method of patient consultation regarding potential study participation:', '10', '0', '0');
 
 -- Is the patient interested in being contacted by study site personnel for potential study participation? --
 INSERT INTO `epic_prod`.`question_lookup_log`
 (`study_id`, `is_answer`, `type`, `key`, `value`, `order`, `required`) 
-VALUES ('2272', '0', 'QUESTION_BOOLEAN', 'INTERESTED_IN_PRESENTING', 'Is the patient interested in being contacted by study site personnel for potential study participation?', '11', '1');
+VALUES ('2272', '0', 'QUESTION_RADIO', 'INTERESTED_IN_PRESENTING', 'Is the patient interested in being contacted by study site personnel for potential study participation?', '11', '0');
 
 -- REFUSAL REASON IF NOT INTERESTED --
 INSERT INTO `epic_prod`.`question_lookup_log`
@@ -68,12 +68,12 @@ VALUES ('2272', '0', 'QUESTION_BIGTEXT', 'REFUSAL_REASON_OTHER', 'Specify Refusa
 -- PRIMARY RATIONALE IF UNKNOWN --
 INSERT INTO `epic_prod`.`question_lookup_log`
 (`study_id`, `is_answer`, `type`, `key`, `value`, `order`, `required`) 
-VALUES ('2272', '0', 'QUESTION_RADIO', 'RATIONALE_UNKNOWN', 'Primary rationale if patient response is unknown:', '14', '0');
+VALUES ('2272', '0', 'QUESTION_RADIO', 'RATIONALE_UNKNOWN', 'If unknown, choose the Primary Rationale below:', '14', '0');
 
 -- PRIMARY RATIONALE Other --
 INSERT INTO `epic_prod`.`question_lookup_log`
 (`study_id`, `is_answer`, `type`, `key`, `value`, `order`, `required`, `double_columns`) 
-VALUES ('2272', '0', 'QUESTION_BIGTEXT', 'RATIONALE_UNKNOWN_OTHER', 'Specify Primary rationale (if \"Other\"):', '15', '0', '0');
+VALUES ('2272', '0', 'QUESTION_BIGTEXT', 'RATIONALE_UNKNOWN_OTHER', 'Specify Primary Rationale (if \"Other\"):', '15', '0', '0');
 
 -- ANSWERS FOR THE QUESTIONS --
 
@@ -129,7 +129,7 @@ INSERT INTO `epic_prod`.`question_lookup_log`
 VALUES ('2272', '1', 'STUDY_CRITERIA_CHECKLIST', '*info-only*', '<div style=\"margin: 0 0 5px 0; font-weight:bold; font-size: 13px;\">Confirm the patient meets the following key study criteria:</div>', '1', '0', '0', ''),
 ('2272', '1', 'STUDY_CRITERIA_CHECKLIST', 'age-12-plus', '≥12 years of age', '2', '0', '0', ''),
 ('2272', '1', 'STUDY_CRITERIA_CHECKLIST', 'weight-77-plus', 'Weight ≥77 lbs', '3', '0', '0', ''),
-('2272', '1', 'STUDY_CRITERIA_CHECKLIST', 'sle-diagnosis', 'Diagnosis of systemic lupus erythematosus ≥ 6 months meeting the 2019 European League Against Rheumatism/American College of Rheumatology (EULAR/ACR) SLE classification criteria', '4', '0', '0', ''),
+('2272', '1', 'STUDY_CRITERIA_CHECKLIST', 'sle-diagnosis', 'Diagnosis of systemic lupus erythematosus ≥6 months meeting the 2019 European League Against Rheumatism/American College of Rheumatology (EULAR/ACR) SLE classification criteria', '4', '0', '0', ''),
 ('2272', '1', 'STUDY_CRITERIA_CHECKLIST', 'current-treatment', 'Currently receiving corticosteroid (CS) and/or anti-malarial treatment and/or another disease-modifying antirheumatic drug (DMARD) (NOTE: If the patient is on CS, they need to be on <30 mg a day and stable for at least 2 weeks)', '5', '0', '0', ''),
 ('2272', '1', 'STUDY_CRITERIA_CHECKLIST', 'sledai-score', 'SLEDAI-2k score ≥6 points (NOTE: If unknown, please proceed. The study site will screen for this. However, the patient must be in an active flare)', '6', '0', '0', ''),
 ('2272', '1', 'STUDY_CRITERIA_CHECKLIST', 'bilag-level', 'BILAG-2004 level “A” disease in ≥1 organ system OR BILAG-2004 level “B” disease in ≥2 organ systems (NOTE: If unknown, please proceed. The study site will screen for this. However, the patient must be in an active flare)', '7', '0', '0', ''),
