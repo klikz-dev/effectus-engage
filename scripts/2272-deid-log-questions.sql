@@ -1,5 +1,5 @@
 -- Delete existing question_lookup_log rows --
-DELETE FROM `epic_prod`.`question_lookup_log` WHERE `study_id` = 2272
+DELETE FROM `epic_prod`.`question_lookup_log` WHERE `study_id` = 2272;
 
 -- PT LOG LOOKUP QUESTIONS FOR STUDY 2272 --
 
