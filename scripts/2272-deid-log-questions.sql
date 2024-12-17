@@ -1,3 +1,6 @@
+-- Delete existing question_lookup_log rows --
+DELETE FROM `epic_prod`.`question_lookup_log` WHERE `study_id` = 2272
+
 -- PT LOG LOOKUP QUESTIONS FOR STUDY 2272 --
 
 -- Total Amount of Time Spent Identifying and/or Consulting with Patient --
@@ -43,7 +46,7 @@ VALUES ('2272', '0', 'QUESTION_CHECKBOX', 'STUDY_CRITERIA_CHECKLIST', 'Key Study
 -- Did the patient meet all of the key study criteria? --
 INSERT INTO `epic_prod`.`question_lookup_log`
 (`study_id`, `is_answer`, `type`, `key`, `value`, `order`, `required`, `double_columns`) 
-VALUES ('2272', '0', 'QUESTION_RADIO', 'PATIENT_MEET_CRIERIA', 'Did the patient meet all of the key study criteria outlined above? (If "yes" or \"unknown\", proceed with consultation)', '9', '1', '0');
+VALUES ('2272', '0', 'QUESTION_RADIO', 'PATIENT_MEET_CRIERIA', 'Did the patient meet all of the key study criteria outlined above? (If "yes" or \"unknown,\" proceed with consultation)', '9', '1', '0');
 
 -- Method of patient consultation regarding potential study participation --
 INSERT INTO `epic_prod`.`question_lookup_log`
