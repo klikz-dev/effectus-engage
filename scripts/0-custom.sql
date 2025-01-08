@@ -1,2 +1,12 @@
-DELETE FROM `epic_prod`.`physician_tracking` WHERE `physician_id` = 1097;
-DELETE FROM `epic_prod`.`physician` WHERE `id` = 1097;
+UPDATE `epic_prod`.`site` SET `site_code` = 5512 WHERE `zip` = 33324;
+UPDATE `epic_prod`.`site` SET `site_code` = 5514 WHERE `zip` = 90623;
+UPDATE `epic_prod`.`site` SET `site_code` = 5515 WHERE `zip` = 90095;
+UPDATE `epic_prod`.`site` SET `site_code` = 5516 WHERE `zip` = 21201;
+UPDATE `epic_prod`.`site` SET `site_code` = 5517 WHERE `zip` = 30322;
+UPDATE `epic_prod`.`site` SET `site_code` = 5518 WHERE `zip` = 63110;
+UPDATE `epic_prod`.`site` SET `site_code` = 5519 WHERE `zip` = 92660;
+UPDATE `epic_prod`.`site` SET `site_code` = 5521 WHERE `zip` = 70605;
+UPDATE `epic_prod`.`site` SET `site_code` = 5522 WHERE `zip` = 19107;
+UPDATE `epic_prod`.`site` SET `site_code` = 5524 WHERE `zip` = 60527;
+UPDATE `epic_prod`.`site` SET `site_code` = 5525 WHERE `zip` = 33033;
+UPDATE `epic_prod`.`site` SET `site_code` = 5526 WHERE `zip` = 70112;
