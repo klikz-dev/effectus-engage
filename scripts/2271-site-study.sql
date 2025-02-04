@@ -2,23 +2,10 @@
 DELETE FROM `epic_prod`.`study_site`
 WHERE `study_id` = 2271;
 
+SET SQL_SAFE_UPDATES = 0;
 DELETE FROM `epic_prod`.`site`
-WHERE `site_code` IN (
-    1008,
-    1007,
-    1015,
-    1001,
-    1017,
-    1012,
-    1005,
-    1021,
-    1020,
-    1011,
-    1013,
-    1018,
-    1014,
-    1019
-);
+WHERE `site_code` IN (1008, 1007, 1015, 1001, 1017, 1012, 1005, 1021, 1020, 1011, 1013, 1018, 1014, 1019);
+SET SQL_SAFE_UPDATES = 1;
 
 DELETE FROM `epic_prod`.`study`
 WHERE `study_id` = 2271;
@@ -31,6 +18,7 @@ VALUES (2271, 'VENUSS (CVAY736S12201) Study', 'Novartis', 'dcSSc Study');
 
 /******** Import Sites **********/
 INSERT INTO `epic_prod`.`site` (`site_code`, `pi_name`, `name`, `address`, `city`, `state`, `zip`, `country`)
+VALUES 
     (1008, 'Rodney Daniel', 'Clinical Res Of W Florida', '2147 NE Coachman Road', 'Clearwater', 'FL', '33765', 'US'),
     (1007, 'Michelle Eisenberg', 'Prolato Clinical Research Center', '8990 Kirby Dr Suite 208', 'Houston', 'TX', '77054', 'US'),
     (1015, 'Jacob Aelion', 'West Tennessee Research Institute', '369 North Parkway Suite 400', 'Jackson', 'TN', '38305', 'US'),
@@ -50,17 +38,17 @@ INSERT INTO `epic_prod`.`site` (`site_code`, `pi_name`, `name`, `address`, `city
 /******** Import Study - Sites relationships **********/
 INSERT INTO `epic_prod`.`study_site` (`study_id`, `site_id`)
 VALUES 
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1008)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1007)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1015)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1001)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1017)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1012)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1005)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1021)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1020)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1011)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1013)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1018)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1014)),
-    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1019));
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1008 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1007 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1015 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1001 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1017 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1012 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1005 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1021 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1020 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1011 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1013 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1018 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1014 AND `id` > 5571 and `id` < 5586)),
+    (2271, (SELECT `id` FROM `epic_prod`.`site` WHERE `site_code` = 1019 AND `id` > 5571 and `id` < 5586));
