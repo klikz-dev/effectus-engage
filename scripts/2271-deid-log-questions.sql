@@ -127,31 +127,34 @@ VALUES ('2271', '1', 'METHOD_OF_IDENTIFICATION', 'record-review', 'Medical Recor
 ('2271', '1', 'METHOD_OF_IDENTIFICATION', 'telemedicine', 'Telemedicine', '3', '0', '0');
 
 -- STUDY CRITERIA CHECKLIST ANSWERS --
-INSERT INTO `epic_prod`.`question_lookup_log` 
+INSERT INTO `epic_prod`.`question_lookup_log`
 (`study_id`, `is_answer`, `type`, `key`, `value`, `order`, `required`, `double_columns`, `style`)
 VALUES ('2271', '1', 'STUDY_CRITERIA_CHECKLIST', '*info-only*', '<div style=\"margin: 0 0 5px 0; font-weight:bold; font-size: 13px;\">Confirm the patient meets the following key study criteria:</div>', '1', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'age-12-plus', '≥12 years of age', '2', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'weight-77-plus', 'Weight ≥77 lbs', '3', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'sle-diagnosis', 'Diagnosis of systemic lupus erythematosus ≥6 months meeting the 2019 European League Against Rheumatism/American College of Rheumatology (EULAR/ACR) SLE classification criteria', '4', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'current-treatment', 'Currently receiving corticosteroid (CS) and/or anti-malarial treatment and/or another disease-modifying antirheumatic drug (DMARD) (NOTE: If the patient is on CS, they need to be on <30 mg a day and stable for at least 2 weeks)', '5', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'sledai-score', 'SLEDAI-2k score ≥6 points (NOTE: If unknown, please proceed. The study site will screen for this. However, the patient must be in an active flare)', '6', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'bilag-level', 'BILAG-2004 level “A” disease in ≥1 organ system OR BILAG-2004 level “B” disease in ≥2 organ systems (NOTE: If unknown, please proceed. The study site will screen for this. However, the patient must be in an active flare)', '7', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'age-18-70', '≥18 and ≤70 years of age', '2', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'systemic-sclerosis', 'Diagnosis of systemic sclerosis, as defined by the 2013 American College of Rheumatology/European League Against Rheumatism (ACR/EULAR) classification criteria for SSc (van den Hoogen et al 2013) and meets the dcSSc subset classification according to LeRoy (LeRoy 1988)', '3', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'mrss-15-45', 'mRSS of ≥15 and ≤45 units (NOTE: If unknown, please proceed. The study site will screen for this)', '4', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'disease-duration', 'Disease duration of ≤60 months (defined as time from the first non-Raynaud phenomenon manifestation)', '5', '0', '0', ''),
 
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', '*info-only*', 'No history of receiving:', '8', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-high-dose-cs', 'High-dose CS, calcineurin inhibitors, Janus kinase (JAK) or other kinase inhibitors, or other DMARDs within the past 12 weeks (NOTE: methotrexate [MTX] or an imidazole derivative or mycophenolic acid [MPA] derivatives are acceptable)', '9', '0', '0', 'margin-left: 50px;'),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-cyclophosphamide', 'Cyclophosphamide or biologics such as immunoglobulins (IV or SC), plasmapheresis, anti-type I interferon receptor (IFNAR1) biologic agents, anti-CD40 agents; CTLA4-Fc Ig (abatacept) or BAFF-targeting agents administered within the past 24 weeks', '10', '0', '0', 'margin-left: 50px;'),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-bcell-depleting-therapies', 'Any B-cell-depleting therapies other than ianalumab administered within the past 36 weeks, or as long as B cell count is less than the lower limit of normal or baseline value prior to receipt of B-cell-depleting therapy (whichever is lower)', '11', '0', '0', 'margin-left: 50px;'),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', '*info-only*', '<div style=\"margin-left: 10px;\">Active disease that meets at least 1 of the following criteria:</div>', '6', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'duration-18-months', 'Disease duration of ≤18 months defined as time from the first non-Raynaud phenomenon manifestation', '7', '0', '0', 'margin-left: 30px;'),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'mrss-increase-3', 'Increase in mRSS of ≥3 units compared with the most recent assessment performed within the last 6 months', '8', '0', '0', 'margin-left: 30px;'),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'new-area-1', 'Involvement of 1 new body area and an increase in mRSS of ≥2 units compared with the most recent assessment performed within last 6 months', '9', '0', '0', 'margin-left: 30px;'),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'new-area-2', 'Involvement of 2 new body areas within the last 6 months', '10', '0', '0', 'margin-left: 30px;'),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'elevated-reactants', 'Elevated acute phase reactants (ESR ≥30 mm/hr or hsCRP ≥6 mg/dL)', '11', '0', '0', 'margin-left: 30px;'),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'ild-ata', 'Presence of interstitial lung disease (ILD) and anti-topoisomerase I (ATA) autoantibody positivity', '12', '0', '0', 'margin-left: 30px;'),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'eustar-index', 'Modified EUSTAR disease activity index (mDAI) >2.5', '13', '0', '0', 'margin-left: 30px;'),
 
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-active-infections', 'No active viral, bacterial, or other infections requiring systemic treatment', '12', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-chronic-infection', 'No known chronic infection with hepatitis B (HBV), hepatitis C (HCV) or active tuberculosis (TB) infection', '13', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-immunodeficiency', 'No history of primary or secondary immunodeficiency, including positive HIV', '14', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-severe-organ-dysfunction', 'No severe organ dysfunction or life-threatening disease', '15', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-major-transplant', 'No history of major organ, hematopoietic stem cell, or bone marrow transplant', '16', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-severe-lupus-kidney-disease', 'No presence of severe lupus kidney disease as defined by proteinuria >2 g/day or equivalent using spot urine protein creatinine ratio, or serum creatinine >2.0 mg/dL (176.84 µmol/L), or requiring immune-suppressive induction or maintenance treatment', '17', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-hypersensitivity', 'No history of hypersensitivity to IgG1 biologics or oral CS or to sucrose, L-histidine hydrochloride, L-histidine, and polysorbate 20', '18', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-non-lupus-conditions', 'No presence of non-lupus conditions such as asthma, gout, or urticaria requiring intermittent or chronic treatment with systemic CS', '19', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-history-of-malignancy', 'No history of malignancy of any organ system other than localized basal cell carcinoma of the skin or in situ cervical cancer', '20', '0', '0', ''),
-('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'not-pregnant', 'Not currently pregnant or breastfeeding', '21', '0', '0', '');
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'positive-autoantibodies', 'Positive for at least 1 of the following autoantibodies: ATA (also known as anti-SCL-70), anti-RNA polymerase III, or anti-nuclear antibody (≥1:80)', '14', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-other-rheumatic', "No rheumatic disease other than dcSSc, including limited cutaneous disease (lcSSc) or sine scleroderma (NOTE: Patients with secondary Sjogren\'s disease and scleroderma myopathy are able to participate)", '15', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-functional-class-3', 'No WHO Functional Class 3 or higher assessment for pulmonary arterial hypertension (PAH), receiving IV therapy for PAH, or evidence of other moderately severe pulmonary disease', '16', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-cyclophosphamide', 'Not treated with cyclophosphamide within the last 12 weeks', '17', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-b-cell-depleting', 'No prior use of a B-cell-depleting therapy other than ianalumab (e.g., rituximab, other anti-CD20 mAb, anti-CD22 mAb, or anti-CD52 mAb) administered within past 36 weeks, or as long as B cell count is less than the lower limit of normal or baseline value prior to receipt of B-cell-depleting therapy (whichever is lower)', '18', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-previous-treatment', 'No previous treatment with chlorambucil, bone marrow transplantation, or total lymphoid irradiation', '19', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-vasculitis', 'No active vasculitis of a major organ system', '20', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-severe-symptoms', 'No current symptoms of severe, progressive, or uncontrolled renal, hepatic, hematologic, gastrointestinal, pulmonary, cardiac, neurologic, or cerebral disease, or substance abuse, whether or not related to SSc', '21', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-malignancy-5-years', 'No history of lymphoproliferative disease or any known malignancy or history of malignancy of any organ system within the past 5 years (except for basal cell carcinoma or actinic keratosis that has been treated with no evidence of recurrence in the past 3 months, carcinoma in situ of the cervix, or noninvasive malignant colon polyps that have been removed)', '22', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'no-chronic-infections', 'No chronic infection with HBV, HCV, HIV, or active TB', '23', '0', '0', ''),
+('2271', '1', 'STUDY_CRITERIA_CHECKLIST', 'not-pregnant', 'Not currently pregnant or breastfeeding', '24', '0', '0', '');
 
 -- PATIENT MEET CRITERIA ANSWERS --
 INSERT INTO `epic_prod`.`question_lookup_log`
