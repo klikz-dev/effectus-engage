@@ -1,6 +1,5 @@
 import openpyxl
 import os
-import json
 
 FILEDIR = f"{os.path.dirname(os.path.dirname(os.path.abspath(__file__)))}/static/files"
 
@@ -47,11 +46,11 @@ def read_excel(file_path: str, column_map: dict, exclude: dict, header_id=1, get
 
 def main():
     rows = read_excel(
-        file_path=f"{FILEDIR}/2272_Immunology SIRIUS Program - SLE Site List_12.10.24_For Engage 12.13.24.xlsx",
+        file_path=f"{FILEDIR}/Immunology SIRIUS Program - SLE Site List_01.29.25.xlsx",
         column_map={
             'site_code': 'Site #', 
-            'name': 'Institution Name', 
             'pi_name': 'PI Name', 
+            'name': 'Institution Name', 
             'address': 'Site Address', 
             'city': 'City', 
             'state': 'State', 
